@@ -1,0 +1,37 @@
+import CommonConstants from '../common/constants/CommonConstant';
+
+@Component
+export default struct ToDoItem {
+  private content?: string;
+  @State isComplete: boolean = false;
+
+  @Builder labelIcon(icon: Resource) {
+    Image(icon)
+      .objectFit(ImageFit.Contain)
+      .width($r('app.float.checkbox_width'))
+      .width($r('app.float.checkbox_width'))
+      .margin($r('app.float.checkbox_margin'))
+  }
+
+  build(){
+    Row(){
+      if(this.isComplete){
+        this.labelIcon($r('app.media.ic_ok'))
+      } else {
+        this.labelIcon($r('app.media.ic_default'))
+      }
+      Text(this.content)
+        .fontSize($r('app.float.item_font_size'))
+        .fontWeight(CommonConstants.FONT_WEIGHT)
+        .opacity(this.isComplete ? CommonConstants.OPACITY_COMPLETED : CommonConstants.OPACITY_DEFAULT)
+        .decoration({ type: this.isComplete ? TextDecorationType.LineThrough : TextDecorationType.None })
+    }
+    .width(CommonConstants.LIST_DEFAULT_WIDTH)
+    .height($r('app.float.list_item_height'))
+    .backgroundColor($r('app.color.start_window_background'))
+    .borderRadius(CommonConstants.BORDER_RADIUS)
+    .onClick(() => {
+      this.isComplete = !this.isComplete
+    })
+  }
+}

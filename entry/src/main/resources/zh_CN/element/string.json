@@ -1,0 +1,28 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "EntryAbility_button_next",
+      "value": "下一步"
+    },
+    {
+      "name": "EntryAbility_back",
+      "value": "返回"
+    },
+    {
+      "name": "ToDoListPage_title",
+      "value": "代办事项"
+    }
+  ]
+}
