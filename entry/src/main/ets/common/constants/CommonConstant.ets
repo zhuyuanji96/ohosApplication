@@ -8,6 +8,11 @@ export default class CommonConstants {
   static readonly FULL_LENGTH: string = '100%';
 
   /**
+   * 主容器宽度 92%
+   */
+  static readonly MAIN_WIDTH: string = '92%';
+
+  /**
    * 主标题宽度 80%
    */
   static readonly TITLE_WIDTH: string = '80%';
